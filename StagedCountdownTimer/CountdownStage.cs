@@ -19,8 +19,31 @@ namespace StagedCountdownTimer
 
         void CountdownStage_Invalidated(object sender, InvalidateEventArgs e)
         {
-            //label5.Text = 
+            label5.Text = getRemainingTime().ToString();
+            if (stageStarted())
+            {
+                progressBar1.Minimum = (int)_departureTime.Ticks;
+                progressBar1.Maximum = (int)_arrivalTime.Ticks;
+                progressBar1.Value = (int)
+                    (DateTime.Now.Ticks < _arrivalTime.Ticks
+                    ? DateTime.Now.Ticks
+                    : _arrivalTime.Ticks);
+
+            }
         }
+
+        private bool stageStarted() { return DateTime.Now < _departureTime; }
+
+        private TimeSpan getRemainingTime()
+        {
+            // find the latest (ie: closest and largest) time
+
+            DateTime from = stageStarted() ? _departureTime : DateTime.Now;
+
+            return _arrivalTime - from;
+        }
+
+
 
         int _stage = 0;
         public int JourneyStage

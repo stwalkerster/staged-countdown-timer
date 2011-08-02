@@ -15,5 +15,10 @@ namespace StagedCountdownTimer
         {
             InitializeComponent();
         }
+
+        private void countdownStage1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
