@@ -59,7 +59,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(624, 575);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(607, 575);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // countdownStage5
@@ -107,7 +107,7 @@
             this.countdownStage1.JourneyStageDestinationName = "Haymarket";
             this.countdownStage1.Location = new System.Drawing.Point(3, 3);
             this.countdownStage1.Name = "countdownStage1";
-            this.countdownStage1.Size = new System.Drawing.Size(618, 109);
+            this.countdownStage1.Size = new System.Drawing.Size(601, 109);
             this.countdownStage1.TabIndex = 0;
             this.countdownStage1.Load += new System.EventHandler(this.countdownStage1_Load);
             // 
@@ -124,7 +124,7 @@
             this.countdownStage2.JourneyStageDestinationName = "Carstairs";
             this.countdownStage2.Location = new System.Drawing.Point(3, 118);
             this.countdownStage2.Name = "countdownStage2";
-            this.countdownStage2.Size = new System.Drawing.Size(618, 109);
+            this.countdownStage2.Size = new System.Drawing.Size(601, 109);
             this.countdownStage2.TabIndex = 1;
             // 
             // countdownStage3
@@ -134,13 +134,13 @@
             this.countdownStage3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.countdownStage3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.countdownStage3.JourneyStage = 3;
-            this.countdownStage3.JourneyStageArrivalTime = new System.DateTime(2011, 8, 2, 19, 30, 0, 0);
+            this.countdownStage3.JourneyStageArrivalTime = new System.DateTime(2011, 8, 2, 19, 36, 0, 0);
             this.countdownStage3.JourneyStageDepartureName = "Carstairs";
-            this.countdownStage3.JourneyStageDepartureTime = new System.DateTime(2011, 8, 2, 19, 36, 0, 0);
+            this.countdownStage3.JourneyStageDepartureTime = new System.DateTime(2011, 8, 2, 19, 30, 0, 0);
             this.countdownStage3.JourneyStageDestinationName = "Carstairs";
             this.countdownStage3.Location = new System.Drawing.Point(3, 233);
             this.countdownStage3.Name = "countdownStage3";
-            this.countdownStage3.Size = new System.Drawing.Size(618, 109);
+            this.countdownStage3.Size = new System.Drawing.Size(601, 109);
             this.countdownStage3.TabIndex = 2;
             // 
             // timer1
