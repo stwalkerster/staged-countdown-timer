@@ -88,7 +88,7 @@ namespace StagedCountdownTimer
                 progressBar1.Value = (int)
                     (DateTime.Now.Ticks < _arrivalTime.Ticks
                     ? progressBar1.Minimum
-                    : ((_arrivalTime.Ticks - baseline.Ticks) / 10000000));
+                    : ((((_arrivalTime.Ticks-DateTime.Now.Ticks) + _departureTime.Ticks) - baseline.Ticks) / 10000000));
 
             }
         }

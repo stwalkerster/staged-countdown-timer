@@ -30,12 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.countdownStage5 = new StagedCountdownTimer.CountdownStage();
             this.countdownStage4 = new StagedCountdownTimer.CountdownStage();
             this.countdownStage1 = new StagedCountdownTimer.CountdownStage();
             this.countdownStage2 = new StagedCountdownTimer.CountdownStage();
             this.countdownStage3 = new StagedCountdownTimer.CountdownStage();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,7 +51,7 @@
             this.tableLayoutPanel1.Controls.Add(this.countdownStage1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.countdownStage2, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.countdownStage3, 0, 2);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 310);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 5;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
@@ -59,8 +59,14 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(607, 575);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(590, 575);
             this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // countdownStage5
             // 
@@ -75,7 +81,7 @@
             this.countdownStage5.JourneyStageDestinationName = "Home";
             this.countdownStage5.Location = new System.Drawing.Point(3, 463);
             this.countdownStage5.Name = "countdownStage5";
-            this.countdownStage5.Size = new System.Drawing.Size(601, 109);
+            this.countdownStage5.Size = new System.Drawing.Size(584, 109);
             this.countdownStage5.TabIndex = 4;
             // 
             // countdownStage4
@@ -91,7 +97,7 @@
             this.countdownStage4.JourneyStageDestinationName = "Oxenholme Lake District";
             this.countdownStage4.Location = new System.Drawing.Point(3, 348);
             this.countdownStage4.Name = "countdownStage4";
-            this.countdownStage4.Size = new System.Drawing.Size(601, 109);
+            this.countdownStage4.Size = new System.Drawing.Size(584, 109);
             this.countdownStage4.TabIndex = 3;
             // 
             // countdownStage1
@@ -107,7 +113,7 @@
             this.countdownStage1.JourneyStageDestinationName = "Haymarket";
             this.countdownStage1.Location = new System.Drawing.Point(3, 3);
             this.countdownStage1.Name = "countdownStage1";
-            this.countdownStage1.Size = new System.Drawing.Size(601, 109);
+            this.countdownStage1.Size = new System.Drawing.Size(584, 109);
             this.countdownStage1.TabIndex = 0;
             this.countdownStage1.Load += new System.EventHandler(this.countdownStage1_Load);
             // 
@@ -124,7 +130,7 @@
             this.countdownStage2.JourneyStageDestinationName = "Carstairs";
             this.countdownStage2.Location = new System.Drawing.Point(3, 118);
             this.countdownStage2.Name = "countdownStage2";
-            this.countdownStage2.Size = new System.Drawing.Size(601, 109);
+            this.countdownStage2.Size = new System.Drawing.Size(584, 109);
             this.countdownStage2.TabIndex = 1;
             // 
             // countdownStage3
@@ -140,14 +146,8 @@
             this.countdownStage3.JourneyStageDestinationName = "Carstairs";
             this.countdownStage3.Location = new System.Drawing.Point(3, 233);
             this.countdownStage3.Name = "countdownStage3";
-            this.countdownStage3.Size = new System.Drawing.Size(601, 109);
+            this.countdownStage3.Size = new System.Drawing.Size(584, 109);
             this.countdownStage3.TabIndex = 2;
-            // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 1000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Form1
             // 
