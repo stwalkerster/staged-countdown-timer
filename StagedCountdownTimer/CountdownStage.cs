@@ -22,12 +22,14 @@ namespace StagedCountdownTimer
             label5.Text = getRemainingTime().ToString();
             if (stageStarted())
             {
-                progressBar1.Minimum = (int)_departureTime.Ticks;
-                progressBar1.Maximum = (int)_arrivalTime.Ticks;
+                DateTime baseline = new DateTime(2011, 1, 1);
+
+                progressBar1.Minimum = (int)(_departureTime.Ticks - baseline.Ticks);
+                progressBar1.Maximum = (int)(_arrivalTime.Ticks - baseline.Ticks);
                 progressBar1.Value = (int)
-                    (DateTime.Now.Ticks < _arrivalTime.Ticks
+                    ((DateTime.Now.Ticks < _arrivalTime.Ticks
                     ? DateTime.Now.Ticks
-                    : _arrivalTime.Ticks);
+                    : _arrivalTime.Ticks) - baseline.Ticks);
 
             }
         }
