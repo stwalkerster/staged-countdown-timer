@@ -39,6 +39,8 @@
             // 
             // tableLayoutPanel1
             // 
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.AutoSize = true;
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -55,7 +57,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(607, 575);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(624, 575);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // countdownStage5
@@ -103,7 +105,7 @@
             this.countdownStage1.JourneyStageDestinationName = "Haymarket";
             this.countdownStage1.Location = new System.Drawing.Point(3, 3);
             this.countdownStage1.Name = "countdownStage1";
-            this.countdownStage1.Size = new System.Drawing.Size(601, 109);
+            this.countdownStage1.Size = new System.Drawing.Size(618, 109);
             this.countdownStage1.TabIndex = 0;
             this.countdownStage1.Load += new System.EventHandler(this.countdownStage1_Load);
             // 
@@ -120,7 +122,7 @@
             this.countdownStage2.JourneyStageDestinationName = "Carstairs";
             this.countdownStage2.Location = new System.Drawing.Point(3, 118);
             this.countdownStage2.Name = "countdownStage2";
-            this.countdownStage2.Size = new System.Drawing.Size(601, 109);
+            this.countdownStage2.Size = new System.Drawing.Size(618, 109);
             this.countdownStage2.TabIndex = 1;
             // 
             // countdownStage3
@@ -136,7 +138,7 @@
             this.countdownStage3.JourneyStageDestinationName = "Carstairs";
             this.countdownStage3.Location = new System.Drawing.Point(3, 233);
             this.countdownStage3.Name = "countdownStage3";
-            this.countdownStage3.Size = new System.Drawing.Size(601, 109);
+            this.countdownStage3.Size = new System.Drawing.Size(618, 109);
             this.countdownStage3.TabIndex = 2;
             // 
             // Form1
@@ -144,7 +146,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(625, 265);
+            this.ClientSize = new System.Drawing.Size(642, 265);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Form1";
             this.Text = "Form1";

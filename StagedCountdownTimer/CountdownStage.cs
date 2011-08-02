@@ -22,14 +22,14 @@ namespace StagedCountdownTimer
             label5.Text = getRemainingTime().ToString();
             if (stageStarted())
             {
-                DateTime baseline = new DateTime(2011, 1, 1);
+                DateTime baseline = new DateTime(2011, 7, 1);
 
-                progressBar1.Minimum = (int)(_departureTime.Ticks - baseline.Ticks);
-                progressBar1.Maximum = (int)(_arrivalTime.Ticks - baseline.Ticks);
+                progressBar1.Minimum = (int)((_departureTime.Ticks - baseline.Ticks)/10000000);
+                progressBar1.Maximum = (int)((_arrivalTime.Ticks - baseline.Ticks) / 10000000);
                 progressBar1.Value = (int)
-                    ((DateTime.Now.Ticks < _arrivalTime.Ticks
-                    ? DateTime.Now.Ticks
-                    : _arrivalTime.Ticks) - baseline.Ticks);
+                    (DateTime.Now.Ticks < _arrivalTime.Ticks
+                    ? progressBar1.Minimum
+                    : ((_arrivalTime.Ticks - baseline.Ticks) / 10000000));
 
             }
         }
@@ -41,7 +41,8 @@ namespace StagedCountdownTimer
             // find the latest (ie: closest and largest) time
 
             DateTime from = stageStarted() ? _departureTime : DateTime.Now;
-
+            if (from > _arrivalTime)
+                return new TimeSpan(0);
             return _arrivalTime - from;
         }
 
