@@ -28,12 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.countdownStage5 = new StagedCountdownTimer.CountdownStage();
             this.countdownStage4 = new StagedCountdownTimer.CountdownStage();
             this.countdownStage1 = new StagedCountdownTimer.CountdownStage();
             this.countdownStage2 = new StagedCountdownTimer.CountdownStage();
             this.countdownStage3 = new StagedCountdownTimer.CountdownStage();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -141,6 +143,12 @@
             this.countdownStage3.Size = new System.Drawing.Size(618, 109);
             this.countdownStage3.TabIndex = 2;
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -165,6 +173,7 @@
         private CountdownStage countdownStage4;
         private CountdownStage countdownStage2;
         private CountdownStage countdownStage3;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

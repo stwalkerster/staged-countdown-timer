@@ -19,28 +19,16 @@ namespace StagedCountdownTimer
 
         void CountdownStage_Invalidated(object sender, InvalidateEventArgs e)
         {
-            label5.Text = getRemainingTime().ToString();
-            if (stageStarted())
-            {
-                DateTime baseline = new DateTime(2011, 7, 1);
 
-                progressBar1.Minimum = (int)((_departureTime.Ticks - baseline.Ticks)/10000000);
-                progressBar1.Maximum = (int)((_arrivalTime.Ticks - baseline.Ticks) / 10000000);
-                progressBar1.Value = (int)
-                    (DateTime.Now.Ticks < _arrivalTime.Ticks
-                    ? progressBar1.Minimum
-                    : ((_arrivalTime.Ticks - baseline.Ticks) / 10000000));
-
-            }
         }
 
-        private bool stageStarted() { return DateTime.Now < _departureTime; }
+        private bool stageStarted() { return DateTime.Now > _departureTime; }
 
         private TimeSpan getRemainingTime()
         {
             // find the latest (ie: closest and largest) time
 
-            DateTime from = stageStarted() ? _departureTime : DateTime.Now;
+            DateTime from = !stageStarted() ? _departureTime : DateTime.Now;
             if (from > _arrivalTime)
                 return new TimeSpan(0);
             return _arrivalTime - from;
@@ -86,6 +74,23 @@ namespace StagedCountdownTimer
         {
             get { return _arrivalTime; }
             set { _arrivalTime = value; label6.Text = value.ToString(); }
+        }
+
+        public void refresh()
+        {
+            label5.Text = getRemainingTime().ToString();
+            if (stageStarted())
+            {
+                DateTime baseline = new DateTime(2011, 7, 1);
+
+                progressBar1.Minimum = (int)((_departureTime.Ticks - baseline.Ticks) / 10000000);
+                progressBar1.Maximum = (int)((_arrivalTime.Ticks - baseline.Ticks) / 10000000);
+                progressBar1.Value = (int)
+                    (DateTime.Now.Ticks < _arrivalTime.Ticks
+                    ? progressBar1.Minimum
+                    : ((_arrivalTime.Ticks - baseline.Ticks) / 10000000));
+
+            }
         }
 
 
